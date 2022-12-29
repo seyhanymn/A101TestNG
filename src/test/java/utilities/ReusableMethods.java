@@ -131,7 +131,7 @@ public class ReusableMethods {
         }
     }
     public static void jsclick(WebElement webElement){
-        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        JavascriptExecutor js = ((JavascriptExecutor) Driver.getDriver());
         js.executeScript("arguments[0].click();", webElement);
         try {
             webElement.click();
@@ -141,7 +141,7 @@ public class ReusableMethods {
         }
     }
     public static void jsExecutorScrool(WebElement webElement) {
-        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        JavascriptExecutor js = ((JavascriptExecutor) Driver.getDriver());
         // Belirli webElement element seviyesine scroll
         js.executeScript("arguments[0].scrollIntoView(true);", webElement);
     }
